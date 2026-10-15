@@ -1,1348 +1,566 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Shah Zaib - Senior Full-Stack Engineer and AI Technologist portfolio resume." />
-  <meta name="theme-color" content="#070b18" />
-  <title>Shah Zaib - Senior Full-Stack Engineer &amp; AI Technologist</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0" rel="stylesheet" />
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FL1H6L1S33"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FL1H6L1S33');
-</script>
-  
-  <style>
-    :root {
-      --pine: #062816;
-      --pine-2: #0b3b24;
-      --pine-3: #104f31;
-      --leaf: #2f7c3f;
-      --leaf-soft: #e5f0df;
-      --gold: #d7a84d;
-      --gold-dark: #a96f21;
-      --cream: #fffaf0;
-      --paper: #fffdf7;
-      --ink: #172018;
-      --muted: #607066;
-      --line: #dfc892;
-      --shadow: 0 24px 70px rgba(6, 40, 22, 0.16);
-      --radius-lg: 24px;
-      --radius-md: 18px;
-      --radius-sm: 12px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      min-height: 100vh;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at 8% 12%, rgba(47, 124, 63, 0.16), transparent 30%),
-        radial-gradient(circle at 92% 8%, rgba(215, 168, 77, 0.18), transparent 28%),
-        linear-gradient(135deg, #f4efe2 0%, #f8f2e4 45%, #edf3e8 100%);
-      line-height: 1.65;
-      padding: 28px;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    li {
-      margin-bottom: 0.35rem;
-    }
-
-    .resume-poster {
-      position: relative;
-      max-width: 1180px;
-      margin: 0 auto;
-      overflow: hidden;
-      background: var(--paper);
-      border: 1px solid rgba(167, 112, 31, 0.32);
-      border-radius: 30px;
-      box-shadow: var(--shadow);
-    }
-
-    .resume-poster::before,
-    .resume-poster::after {
-      content: "";
-      position: absolute;
-      z-index: 0;
-      width: 260px;
-      height: 260px;
-      background:
-        radial-gradient(circle, rgba(47, 124, 63, 0.12) 0 30%, transparent 31%),
-        conic-gradient(from 180deg at 50% 50%, transparent 0 20%, rgba(47, 124, 63, 0.08) 21% 27%, transparent 28% 100%);
-      pointer-events: none;
-    }
-
-    .resume-poster::before {
-      top: 120px;
-      right: -95px;
-      transform: rotate(-18deg);
-    }
-
-    .resume-poster::after {
-      left: -95px;
-      bottom: 210px;
-      transform: rotate(24deg);
-    }
-
-    .topbar,
-    .content,
-    .feature-strip,
-    .compact-panels,
-    .footer-cta {
-      position: relative;
-      z-index: 1;
-    }
-
-    .topbar {
-      display: grid;
-      grid-template-columns: 220px minmax(0, 1fr) 170px;
-      gap: 22px;
-      align-items: center;
-      padding: 28px 30px 24px;
-      background:
-        linear-gradient(90deg, rgba(255, 250, 240, 0.95), rgba(255, 253, 247, 0.98)),
-        repeating-linear-gradient(90deg, transparent 0 52px, rgba(215, 168, 77, 0.08) 53px 54px);
-      border-bottom: 1px solid rgba(215, 168, 77, 0.4);
-    }
-
-    .brand-block {
-      display: grid;
-      grid-template-columns: 74px 1fr;
-      gap: 14px;
-      align-items: center;
-    }
-
-    .monogram {
-      width: 74px;
-      height: 74px;
-      display: grid;
-      place-items: center;
-      color: var(--gold);
-      background:
-        radial-gradient(circle at 50% 34%, rgba(255, 255, 255, 0.16), transparent 32%),
-        linear-gradient(145deg, var(--pine), var(--pine-3));
-      border: 3px solid var(--gold);
-      border-radius: 22px;
-      box-shadow: 0 12px 24px rgba(6, 40, 22, 0.18);
-      font-family: "Cinzel", serif;
-      font-size: 1.8rem;
-      font-weight: 800;
-      letter-spacing: -0.08em;
-    }
-
-    .brand-copy span {
-      display: block;
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      color: var(--gold-dark);
-      text-transform: uppercase;
-    }
-
-    .brand-copy strong {
-      display: block;
-      margin-top: 2px;
-      color: var(--pine);
-      font-size: 1.08rem;
-      line-height: 1.18;
-    }
-
-    .headline {
-      text-align: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 5px;
-      color: var(--muted);
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before,
-    .eyebrow::after {
-      content: "";
-      width: 46px;
-      height: 1px;
-      background: var(--line);
-    }
-
-    h1 {
-      font-family: "Cinzel", serif;
-      color: var(--pine);
-      font-size: clamp(2.2rem, 5vw, 4.1rem);
-      line-height: 0.98;
-      letter-spacing: -0.05em;
-      text-transform: uppercase;
-    }
-
-    .headline h2 {
-      margin-top: 8px;
-      color: var(--ink);
-      font-size: clamp(0.95rem, 2.5vw, 1.35rem);
-      font-weight: 800;
-      letter-spacing: 0.02em;
-    }
-
-    .script-line {
-      margin-top: 13px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      color: var(--gold-dark);
-      font-family: "Playfair Display", serif;
-      font-size: clamp(1.04rem, 2.5vw, 1.55rem);
-      font-weight: 800;
-      font-style: italic;
-    }
-
-    .script-line::before,
-    .script-line::after {
-      content: "";
-      width: min(120px, 18vw);
-      height: 1px;
-      background: var(--line);
-    }
-
-    .availability-ribbon {
-      position: relative;
-      min-height: 170px;
-      display: grid;
-      place-items: center;
-      padding: 16px 12px 28px;
-      color: #fff;
-      background: linear-gradient(180deg, #082715, #0e3f26 74%, #072112);
-      border: 2px solid var(--gold);
-      clip-path: polygon(0 0, 100% 0, 100% 86%, 50% 100%, 0 86%);
-      text-align: center;
-      box-shadow: 0 16px 30px rgba(6, 40, 22, 0.2);
-    }
-
-    .availability-ribbon span {
-      display: block;
-      font-size: 0.82rem;
-      line-height: 1.1;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .availability-ribbon strong {
-      display: block;
-      margin: 5px 0;
-      color: var(--gold);
-      font-family: "Playfair Display", serif;
-      font-size: 2.2rem;
-      line-height: 0.95;
-    }
-
-    .availability-ribbon small {
-      color: rgba(255, 255, 255, 0.78);
-      font-size: 0.73rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .content {
-      display: grid;
-      grid-template-columns: 335px minmax(0, 1fr);
-      gap: 24px;
-      padding: 28px 30px 22px;
-    }
-
-    .profile-card {
-      align-self: start;
-      overflow: hidden;
-      background: var(--cream);
-      border: 1px solid rgba(215, 168, 77, 0.62);
-      border-radius: var(--radius-lg);
-      box-shadow: 0 18px 45px rgba(6, 40, 22, 0.12);
-    }
-
-    .portrait-wrap {
-      position: relative;
-      padding: 18px 18px 0;
-    }
-
-    .portrait-wrap::after {
-      content: "";
-      position: absolute;
-      right: 30px;
-      bottom: -18px;
-      width: 70px;
-      height: 70px;
-      background: rgba(215, 168, 77, 0.18);
-      border-radius: 50%;
-      z-index: 0;
-    }
-
-    .portrait {
-      position: relative;
-      z-index: 1;
-      display: block;
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border: 1px solid rgba(215, 168, 77, 0.65);
-      border-radius: 20px 20px 8px 8px;
-      background: var(--leaf-soft);
-    }
-
-    .nameplate {
-      position: relative;
-      padding: 23px 22px 24px;
-      color: #fff;
-      background:
-        linear-gradient(135deg, rgba(7, 53, 31, 0.98), rgba(3, 28, 15, 1)),
-        radial-gradient(circle at 12% 14%, rgba(215, 168, 77, 0.16), transparent 28%);
-      text-align: center;
-    }
-
-    .nameplate h3 {
-      color: #fff;
-      font-family: "Playfair Display", serif;
-      font-size: 2rem;
-      line-height: 1.05;
-    }
-
-    .nameplate p {
-      margin-top: 7px;
-      color: var(--gold);
-      font-size: 1.02rem;
-      font-weight: 800;
-    }
-
-    .mini-divider {
-      width: 72%;
-      height: 1px;
-      margin: 13px auto 0;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-
-    .contact-list {
-      display: grid;
-      gap: 12px;
-      padding: 20px 22px 22px;
-      color: #fff;
-      background: linear-gradient(180deg, #0c321e, #082716);
-    }
-
-    .contact-row {
-      display: grid;
-      grid-template-columns: 30px 1fr;
-      gap: 10px;
-      align-items: center;
-      font-size: 0.9rem;
-      word-break: break-word;
-    }
-
-    .contact-row .material-symbols-outlined {
-      width: 30px;
-      height: 30px;
-      display: grid;
-      place-items: center;
-      color: var(--gold);
-      background: rgba(255, 255, 255, 0.07);
-      border-radius: 8px;
-      font-size: 1.05rem;
-    }
-
-    .quote-card {
-      padding: 22px 22px 25px;
-      background: var(--paper);
-      text-align: center;
-      font-weight: 600;
-      color: var(--ink);
-    }
-
-    .quote-mark {
-      display: block;
-      color: var(--pine);
-      font-family: "Playfair Display", serif;
-      font-size: 3.4rem;
-      line-height: 0.55;
-    }
-
-    .main-column {
-      display: grid;
-      gap: 22px;
-      min-width: 0;
-    }
-
-    .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      width: fit-content;
-      margin: 0 0 14px;
-      padding: 8px 17px 8px 10px;
-      color: #fff;
-      background: var(--pine);
-      border: 1px solid rgba(215, 168, 77, 0.88);
-      border-radius: 999px;
-      box-shadow: 0 9px 18px rgba(6, 40, 22, 0.12);
-      font-weight: 900;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .section-label .material-symbols-outlined {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      color: var(--gold);
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 50%;
-      font-size: 1.25rem;
-    }
-
-    .panel {
-      position: relative;
-      padding: 22px;
-      background: rgba(255, 253, 247, 0.88);
-      border: 1px solid rgba(215, 168, 77, 0.42);
-      border-radius: var(--radius-md);
-    }
-
-    .panel::before {
-      content: "";
-      position: absolute;
-      top: -1px;
-      left: 24px;
-      right: 24px;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-
-    .summary-text {
-      color: #303c33;
-      font-size: 1.02rem;
-    }
-
-    .focus-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .focus-card {
-      overflow: hidden;
-      min-height: 170px;
-      background: var(--cream);
-      border: 1px solid rgba(215, 168, 77, 0.62);
-      border-radius: 15px;
-      box-shadow: 0 12px 26px rgba(6, 40, 22, 0.08);
-    }
-
-    .focus-art {
-      position: relative;
-      min-height: 112px;
-      padding: 14px;
-      background:
-        linear-gradient(135deg, rgba(6, 40, 22, 0.88), rgba(47, 124, 63, 0.74)),
-        radial-gradient(circle at 80% 22%, rgba(215, 168, 77, 0.58), transparent 22%);
-      color: #fff;
-    }
-
-    .focus-card:nth-child(2) .focus-art {
-      background:
-        linear-gradient(135deg, rgba(7, 53, 31, 0.95), rgba(25, 80, 47, 0.82)),
-        radial-gradient(circle at 25% 80%, rgba(215, 168, 77, 0.45), transparent 24%);
-    }
-
-    .focus-card:nth-child(3) .focus-art {
-      background:
-        linear-gradient(135deg, rgba(21, 45, 31, 0.95), rgba(39, 108, 58, 0.80)),
-        repeating-linear-gradient(45deg, rgba(255,255,255,0.12) 0 1px, transparent 1px 11px);
-    }
-
-    .focus-card:nth-child(4) .focus-art {
-      background:
-        linear-gradient(135deg, rgba(7, 53, 31, 0.92), rgba(122, 91, 31, 0.78)),
-        radial-gradient(circle at 78% 72%, rgba(255,255,255,0.18), transparent 24%);
-    }
-
-    .focus-number {
-      display: inline-grid;
-      place-items: center;
-      width: 46px;
-      height: 42px;
-      color: #fff;
-      background: rgba(0, 0, 0, 0.46);
-      border: 1px solid rgba(215, 168, 77, 0.55);
-      border-radius: 10px;
-      font-size: 1.15rem;
-      font-weight: 900;
-    }
-
-    .focus-art .material-symbols-outlined {
-      position: absolute;
-      right: 16px;
-      bottom: 14px;
-      color: rgba(255, 255, 255, 0.84);
-      font-size: 3.4rem;
-    }
-
-    .focus-card h4 {
-      padding: 14px 16px 2px;
-      color: var(--pine);
-      font-size: 1rem;
-    }
-
-    .focus-card p {
-      padding: 0 16px 15px;
-      color: var(--muted);
-      font-size: 0.87rem;
-      line-height: 1.5;
-    }
-
-    .feature-strip {
-      display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 0;
-      margin: 0 30px 20px;
-      overflow: hidden;
-      background: rgba(255, 253, 247, 0.82);
-      border: 1px solid rgba(6, 40, 22, 0.18);
-      border-radius: 18px;
-    }
-
-    .feature {
-      min-height: 118px;
-      display: grid;
-      place-items: center;
-      gap: 7px;
-      padding: 14px 10px;
-      text-align: center;
-      border-right: 1px solid rgba(215, 168, 77, 0.32);
-    }
-
-    .feature:last-child {
-      border-right: 0;
-    }
-
-    .feature .material-symbols-outlined {
-      color: var(--pine);
-      font-size: 2rem;
-    }
-
-    .feature strong {
-      display: block;
-      color: var(--ink);
-      font-size: 0.86rem;
-      line-height: 1.25;
-    }
-
-    .feature span:not(.material-symbols-outlined) {
-      color: var(--muted);
-      font-size: 0.74rem;
-      line-height: 1.25;
-    }
-
-    .compact-panels {
-      display: grid;
-      grid-template-columns: 1.05fr 1.65fr 1fr;
-      gap: 16px;
-      padding: 0 30px 22px;
-    }
-
-    .mini-panel {
-      padding: 18px;
-      background: var(--cream);
-      border: 1px solid rgba(215, 168, 77, 0.55);
-      border-radius: 16px;
-      text-align: center;
-    }
-
-    .mini-panel h3 {
-      color: var(--pine);
-      font-size: 0.9rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .stack-line {
-      margin: 8px 0 3px;
-      color: var(--pine);
-      font-family: "Playfair Display", serif;
-      font-size: 1.42rem;
-      font-weight: 800;
-    }
-
-    .stack-line span {
-      color: var(--gold-dark);
-      margin: 0 6px;
-    }
-
-    .mini-panel p {
-      color: var(--muted);
-      font-size: 0.82rem;
-      line-height: 1.45;
-    }
-
-    .opportunities {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 0;
-      padding: 0;
-    }
-
-    .opportunity {
-      padding: 4px 8px;
-      border-right: 1px solid rgba(215, 168, 77, 0.35);
-      color: var(--ink);
-      font-size: 0.78rem;
-      line-height: 1.25;
-      text-align: center;
-    }
-
-    .opportunity:last-child {
-      border-right: 0;
-    }
-
-    .opportunity .material-symbols-outlined {
-      display: block;
-      margin: 0 auto 4px;
-      color: var(--pine);
-      font-size: 1.65rem;
-    }
-
-    .resume-sections {
-      display: grid;
-      gap: 22px;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 14px;
-    }
-
-    .timeline-item,
-    .project-item {
-      position: relative;
-      padding: 16px 16px 16px 20px;
-      background: #fff;
-      border: 1px solid rgba(215, 168, 77, 0.34);
-      border-left: 5px solid var(--gold);
-      border-radius: 14px;
-    }
-
-    .item-head {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin-bottom: 6px;
-    }
-
-    .item-head h4 {
-      color: var(--pine);
-      font-size: 1.02rem;
-      line-height: 1.25;
-    }
-
-    .date-pill {
-      flex: 0 0 auto;
-      padding: 5px 10px;
-      color: var(--pine);
-      background: rgba(215, 168, 77, 0.18);
-      border: 1px solid rgba(215, 168, 77, 0.42);
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    .company-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-bottom: 8px;
-      color: var(--muted);
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    .company-row .dot {
-      width: 4px;
-      height: 4px;
-      background: var(--gold-dark);
-      border-radius: 50%;
-    }
-
-    .timeline-item ul,
-    .project-item ul {
-      color: #3d4a42;
-      font-size: 0.92rem;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .project-item {
-      min-height: 100%;
-    }
-
-    .project-item h4 {
-      color: var(--pine);
-      font-size: 1rem;
-      line-height: 1.3;
-    }
-
-    .project-item p {
-      color: #3d4a42;
-      font-size: 0.9rem;
-      line-height: 1.55;
-    }
-
-    .tag-cloud {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      padding: 5px 9px;
-      color: var(--pine);
-      background: var(--leaf-soft);
-      border: 1px solid rgba(47, 124, 63, 0.18);
-      border-radius: 999px;
-      font-size: 0.76rem;
-      font-weight: 800;
-    }
-
-    .skills-board {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .skill-box {
-      padding: 15px;
-      background: #fff;
-      border: 1px solid rgba(215, 168, 77, 0.34);
-      border-radius: 14px;
-    }
-
-    .skill-box h4 {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      margin-bottom: 10px;
-      color: var(--pine);
-      font-size: 0.94rem;
-    }
-
-    .skill-box .material-symbols-outlined {
-      color: var(--gold-dark);
-      font-size: 1.15rem;
-    }
-
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      list-style: none;
-      padding: 0;
-    }
-
-    .skill-list li {
-      margin: 0;
-      padding: 5px 8px;
-      color: #314035;
-      background: #f8f0de;
-      border-radius: 8px;
-      font-size: 0.76rem;
-      font-weight: 700;
-    }
-
-    .footer-cta {
-      display: grid;
-      grid-template-columns: 1fr 320px;
-      gap: 24px;
-      align-items: center;
-      padding: 24px 30px 28px;
-      color: #fff;
-      background:
-        linear-gradient(90deg, rgba(6, 40, 22, 0.98), rgba(8, 52, 31, 0.98)),
-        radial-gradient(circle at 18% 20%, rgba(215, 168, 77, 0.18), transparent 28%);
-      border-top: 2px solid var(--gold);
-    }
-
-    .footer-cta h3 {
-      color: var(--gold);
-      font-family: "Cinzel", serif;
-      font-size: clamp(1.25rem, 3vw, 2rem);
-      line-height: 1.08;
-      text-transform: uppercase;
-    }
-
-    .footer-cta h3 span {
-      color: #fff;
-    }
-
-    .footer-cta p {
-      max-width: 760px;
-      margin-top: 7px;
-      color: rgba(255, 255, 255, 0.82);
-      line-height: 1.45;
-    }
-
-    .footer-contact {
-      display: grid;
-      gap: 9px;
-      font-size: 0.87rem;
-    }
-
-    .footer-contact a {
-      display: grid;
-      grid-template-columns: 22px 1fr;
-      gap: 8px;
-      align-items: center;
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .footer-contact .material-symbols-outlined {
-      color: var(--gold);
-      font-size: 1.08rem;
-    }
-
-    @media (max-width: 980px) {
-      body {
-        padding: 14px;
-      }
-
-      .topbar,
-      .content,
-      .compact-panels,
-      .footer-cta {
-        grid-template-columns: 1fr;
-      }
-
-      .topbar {
-        text-align: center;
-      }
-
-      .brand-block {
-        grid-template-columns: 74px minmax(0, 1fr);
-        justify-self: center;
-        text-align: left;
-      }
-
-      .availability-ribbon {
-        max-width: 210px;
-        justify-self: center;
-      }
-
-      .content {
-        padding: 22px;
-      }
-
-      .profile-card {
-        max-width: 420px;
-        justify-self: center;
-      }
-
-      .feature-strip {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        margin: 0 22px 18px;
-      }
-
-      .feature:nth-child(3) {
-        border-right: 0;
-      }
-
-      .feature:nth-child(-n+3) {
-        border-bottom: 1px solid rgba(215, 168, 77, 0.32);
-      }
-
-      .compact-panels {
-        padding: 0 22px 20px;
-      }
-
-      .projects-grid,
-      .skills-board {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 620px) {
-      .resume-poster {
-        border-radius: 20px;
-      }
-
-      .topbar {
-        padding: 22px 18px;
-      }
-
-      .brand-block {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        text-align: center;
-      }
-
-      .content {
-        padding: 18px;
-      }
-
-      .focus-grid,
-      .feature-strip,
-      .opportunities {
-        grid-template-columns: 1fr;
-      }
-
-      .feature,
-      .feature:nth-child(3) {
-        border-right: 0;
-        border-bottom: 1px solid rgba(215, 168, 77, 0.32);
-      }
-
-      .feature:last-child {
-        border-bottom: 0;
-      }
-
-      .opportunity {
-        border-right: 0;
-        border-bottom: 1px solid rgba(215, 168, 77, 0.28);
-        padding: 10px;
-      }
-
-      .opportunity:last-child {
-        border-bottom: 0;
-      }
-
-      .item-head {
-        flex-direction: column;
-      }
-
-      .date-pill {
-        width: fit-content;
-      }
-    }
-
-    @media print {
-      body {
-        padding: 0;
-        background: #fff;
-      }
-
-      .resume-poster {
-        max-width: none;
-        box-shadow: none;
-        border-radius: 0;
-      }
-
-      .topbar,
-      .content,
-      .feature-strip,
-      .compact-panels,
-      .footer-cta {
-        break-inside: avoid;
-      }
-
-      a {
-        text-decoration: none;
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="theme.css" />
-</head>
-<body>
-  <div class="resume-poster">
-    <header class="topbar" aria-label="Resume header">
-      <div class="brand-block">
-        <div class="monogram" aria-hidden="true">SZ</div>
-        <div class="brand-copy">
-          <span>Engineering Portfolio</span>
-          <strong>Full-Stack, AI &amp; SaaS Systems</strong>
-        </div>
-      </div>
-
-      <div class="headline">
-        <div class="eyebrow">Portfolio Resume</div>
-        <h1>Shah Zaib</h1>
-        <h2>Senior Full-Stack Engineer &amp; AI Technologist</h2>
-        <div class="script-line">Explore. Build. Automate.</div>
-      </div>
-
-      <div class="availability-ribbon" aria-label="Availability badge">
-        <div>
-          <span>Available For</span>
-          <strong>2026</strong>
-          <small>Remote Projects</small>
-        </div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#173d35">
+    <meta name="description" content="Shah Zaib is a senior full-stack engineer building SaaS platforms and AI-powered products end to end. Based in Bahawalpur, Punjab, Pakistan. Open to remote engineering roles and client projects.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://shah743.github.io/">
+    <meta property="og:url" content="https://shah743.github.io/">
+    <meta property="og:title" content="Shah Zaib — Full-Stack & AI Product Engineer">
+    <meta property="og:description" content="From idea to everyday use. SaaS, AI products, and end-to-end engineering by Shah Zaib.">
+    <meta property="og:image" content="https://shah743.github.io/assets/shah-zaib.png">
+    <meta property="og:image:alt" content="Shah Zaib, Senior Full-Stack Engineer and AI Product Engineer">
+    <title>Shah Zaib — Full-Stack & AI Product Engineer</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="motion.js" defer></script>
+    <script type="module" src="scene.js"></script>
+  </head>
+  <body>
+    <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+        <symbol id="icon-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M10 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></symbol>
+        <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+        <symbol id="icon-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/></symbol>
+        <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></symbol>
+        <symbol id="icon-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+        <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+        <symbol id="icon-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+        <symbol id="icon-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z"/></symbol>
+        <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></symbol>
+      </defs>
+    </svg>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Shah Zaib, home"><span class="monogram" aria-hidden="true">sz<span>.</span></span><span class="brand-name">Shah Zaib<span>Engineer &amp; product builder</span></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" type="button">Menu <span aria-hidden="true">+</span></button>
+        <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+          <a href="#work">Selected work</a><a href="#approach">Approach</a><a href="#about">About</a><a href="#experience">Experience</a><a class="nav-contact" href="#contact">Let’s talk <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-chevron"></use></svg></a>
+        </nav>
       </div>
     </header>
-
-    <main>
-    <section class="content">
-      <aside class="profile-card" aria-label="Profile summary">
-        <div class="portrait-wrap">
-          <img class="portrait" src="https://avatars.githubusercontent.com/u/6793449?v=4" alt="Shah Zaib" />
-        </div>
-        <div class="nameplate">
-          <h3>Shah Zaib</h3>
-          <p>Senior Full-Stack Engineer</p>
-          <div class="mini-divider" aria-hidden="true"></div>
-        </div>
-        <div class="contact-list">
-          <a class="contact-row" href="mailto:shahzaib_khw@hotmail.com">
-            <span class="material-symbols-outlined" aria-hidden="true">mail</span>
-            <span>shahzaib_khw@hotmail.com</span>
+    <main id="main">
+      <section class="hero container" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Senior full-stack &amp; AI product engineer</p>
+          <h1 id="hero-title">From idea<br>to <em>everyday use.</em></h1>
+          <p class="hero-intro">I’m Shah Zaib. I build SaaS platforms and AI-powered products, taking responsibility for the whole journey—from the first technical decisions to the next release.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#work">Explore my work <svg class="icon icon-down" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-chevron"></use></svg></a><a class="text-link" href="#contact">Build something with me <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-chevron"></use></svg></a>
+          </div>
+          <a class="resume-link" href="assets/Shah-Zaib-Resume.pdf" download="Shah-Zaib-Resume.pdf">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg>
+            Download résumé <span class="file-type">PDF</span>
           </a>
-          <a class="contact-row" href="tel:+923180022016">
-            <span class="material-symbols-outlined" aria-hidden="true">call</span>
-            <span>+92 318 0022016</span>
-          </a>
-          <div class="contact-row">
-            <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
-            <span>Karachi, Pakistan</span>
+          <div class="hero-proof">
+            <div>
+              <strong>10+ years</strong><span>in full-stack engineering</span>
+            </div>
+            <div>
+              <strong>End to end</strong><span>architecture through delivery</span>
+            </div>
+            <div>
+              <strong>Independent</strong><span>engineer &amp; co-founder</span>
+            </div>
           </div>
-          <a class="contact-row" href="https://linkedin.com/in/shahzaibfullstack" target="_blank" rel="noopener">
-            <span class="material-symbols-outlined" aria-hidden="true">groups</span>
-            <span>LinkedIn /shahzaibfullstack</span>
-          </a>
-          <a class="contact-row" href="https://github.com/shah743" target="_blank" rel="noopener">
-            <span class="material-symbols-outlined" aria-hidden="true">code</span>
-            <span>GitHub /shah743</span>
-          </a>
         </div>
-        <div class="quote-card">
-          <span class="quote-mark" aria-hidden="true">&ldquo;</span>
-          Building reliable SaaS platforms, AI workflows, and real-time systems that turn complex ideas into useful products.
-        </div>
-      </aside>
-
-      <div class="main-column">
-        <section class="panel" id="about">
-          <h2 class="section-label"><span class="material-symbols-outlined" aria-hidden="true">person</span> About Me</h2>
-          <p class="summary-text">
-            Senior Full-Stack Engineer and AI Technologist with 10+ years of experience designing, building, and scaling production-grade SaaS platforms, AI-powered products, and real-time collaboration systems. Specialized in Ruby on Rails, modern JavaScript, Hotwire/Turbo, Stimulus, Vue, React, and LLM-based solutions using OpenAI and cloud AI services. Comfortable owning end-to-end delivery from architecture and data modeling to frontend UX, DevOps, observability, and measurable business impact.
-          </p>
-        </section>
-
-        <section id="focus">
-          <h2 class="section-label"><span class="material-symbols-outlined" aria-hidden="true">interests</span> Engineering Focus Areas</h2>
-          <div class="focus-grid">
-            <article class="focus-card">
-              <div class="focus-art">
-                <span class="focus-number">01</span>
-                <span class="material-symbols-outlined" aria-hidden="true">psychology</span>
-              </div>
-              <h4>AI Product Engineering</h4>
-              <p>LLM apps, prompt workflows, transcription, image/video processing, semantic search, and document parsing.</p>
-            </article>
-            <article class="focus-card">
-              <div class="focus-art">
-                <span class="focus-number">02</span>
-                <span class="material-symbols-outlined" aria-hidden="true">deployed_code</span>
-              </div>
-              <h4>Ruby on Rails SaaS</h4>
-              <p>Secure, scalable Rails systems with billing, auth, dashboards, admin tools, and production operations.</p>
-            </article>
-            <article class="focus-card">
-              <div class="focus-art">
-                <span class="focus-number">03</span>
-                <span class="material-symbols-outlined" aria-hidden="true">hub</span>
-              </div>
-              <h4>Real-Time Platforms</h4>
-              <p>Action Cable, WebSockets, notifications, collaboration, messaging, scheduling, and live user experiences.</p>
-            </article>
-            <article class="focus-card">
-              <div class="focus-art">
-                <span class="focus-number">04</span>
-                <span class="material-symbols-outlined" aria-hidden="true">cloud_done</span>
-              </div>
-              <h4>Cloud &amp; DevOps</h4>
-              <p>Docker, AWS, DigitalOcean, CI/CD, Nginx, Kamal, Capistrano, monitoring, and deployment pipelines.</p>
-            </article>
+        <figure class="portrait">
+          <div class="portrait-accent" aria-hidden="true">
+            <svg class="accent-fallback" viewBox="0 0 180 180" focusable="false">
+              <ellipse cx="90" cy="90" rx="67" ry="29" transform="rotate(-32 90 90)"/>
+              <ellipse cx="90" cy="90" rx="67" ry="29" transform="rotate(40 90 90)"/>
+              <ellipse cx="90" cy="90" rx="67" ry="29" transform="rotate(90 90 90)"/>
+              <circle cx="90" cy="90" r="7"/><circle cx="145" cy="51" r="4"/>
+            </svg>
           </div>
-        </section>
-      </div>
-    </section>
+          <div class="portrait-image">
+            <img src="assets/shah-zaib.png" alt="Shah Zaib wearing glasses and a dark suit" width="1091" height="1442" fetchpriority="high" decoding="async"><span class="portrait-label">A builder at heart.</span>
+          </div>
+          <figcaption>
+            <svg class="icon location-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-pin"></use></svg>
+            <div>
+              Bahawalpur, Punjab<span>Pakistan · Working remotely</span>
+            </div>
 
-    <section class="feature-strip" aria-label="Why work with me">
-      <div class="feature">
-        <span class="material-symbols-outlined" aria-hidden="true">workspace_premium</span>
-        <strong>10+ Years</strong>
-        <span>Production experience</span>
-      </div>
-      <div class="feature">
-        <span class="material-symbols-outlined" aria-hidden="true">architecture</span>
-        <strong>Architecture</strong>
-        <span>End-to-end ownership</span>
-      </div>
-      <div class="feature">
-        <span class="material-symbols-outlined" aria-hidden="true">smart_toy</span>
-        <strong>AI Delivery</strong>
-        <span>OpenAI, GCP, AWS</span>
-      </div>
-      <div class="feature">
-        <span class="material-symbols-outlined" aria-hidden="true">security</span>
-        <strong>Secure Apps</strong>
-        <span>Auth, SSL, OWASP</span>
-      </div>
-      <div class="feature">
-        <span class="material-symbols-outlined" aria-hidden="true">speed</span>
-        <strong>Performance</strong>
-        <span>Scalable workflows</span>
-      </div>
-      <div class="feature">
-        <span class="material-symbols-outlined" aria-hidden="true">handshake</span>
-        <strong>Remote Ready</strong>
-        <span>Client collaboration</span>
-      </div>
-    </section>
-
-    <section class="compact-panels" aria-label="Quick highlights">
-      <div class="mini-panel">
-        <h3>Core Stack</h3>
-        <div class="stack-line">Rails <span>|</span> JS <span>|</span> AI</div>
-        <p>Ruby, Rails 7/8, Hotwire, Vue, React, Node, Python, SQL, PostgreSQL, Redis.</p>
-      </div>
-      <div class="mini-panel">
-        <h3>Delivery Strengths</h3>
-        <div class="opportunities">
-          <div class="opportunity"><span class="material-symbols-outlined" aria-hidden="true">schema</span>System Design</div>
-          <div class="opportunity"><span class="material-symbols-outlined" aria-hidden="true">api</span>API Design</div>
-          <div class="opportunity"><span class="material-symbols-outlined" aria-hidden="true">payments</span>Billing</div>
-          <div class="opportunity"><span class="material-symbols-outlined" aria-hidden="true">monitoring</span>Observability</div>
-          <div class="opportunity"><span class="material-symbols-outlined" aria-hidden="true">school</span>Mentoring</div>
+          </figcaption>
+        </figure>
+      </section>
+      <div class="expertise-strip">
+        <div class="container">
+          <span>PRODUCT THINKING.<br>HANDS-ON ENGINEERING.</span>
+          <p>Ruby · Rails · Python</p>
+          <span class="separator" aria-hidden="true">/</span>
+          <p>Modern frontends</p>
+          <span class="separator" aria-hidden="true">/</span>
+          <p>Applied AI</p>
+          <span class="separator" aria-hidden="true">/</span>
+          <p>Production delivery</p>
         </div>
       </div>
-      <div class="mini-panel">
-        <h3>Languages</h3>
-        <div class="stack-line">EN <span>|</span> UR <span>|</span> HI</div>
-        <p>English fluent, Urdu native, Hindi and Punjabi.</p>
-      </div>
-    </section>
-
-    <section class="content resume-sections">
-      <div class="main-column" style="grid-column: 1 / -1;">
-        <section class="panel" id="experience">
-          <h2 class="section-label"><span class="material-symbols-outlined" aria-hidden="true">work</span> Experience</h2>
-          <div class="timeline">
-            <article class="timeline-item">
-              <div class="item-head">
-                <h4>Freelance Senior Full-Stack Engineer</h4>
-                <span class="date-pill">2021 - Present</span>
+      <section class="section container" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / Selected work</p>
+            <h2 id="work-title">Different products.<br><em>The same ownership.</em></h2>
+          </div>
+          <p>Client platforms, a co-founded product, and ideas of my own. Here’s what I’m building—and my part in each.</p>
+        </div>
+        <nav class="project-index" aria-label="Jump to a project">
+          <a href="#person">01 <span>Person.care</span></a><a href="#intellecta">02 <span>Intellecta</span></a><a href="#dbdesigner">03 <span>DB Designer</span></a><a href="#rhini">04 <span>RhiniSmartAI</span></a><a href="#rolescout">05 <span>RoleScout</span></a>
+        </nav>
+        <article class="project featured-project" id="person">
+          <div class="project-visual person-visual" aria-label="Person.care connects client experiences, care delivery, and practice operations">
+            <div class="visual-topline">
+              <span>PERSON.CARE</span><span>CONNECTED CARE</span>
+            </div>
+            <div class="care-system">
+              <div class="care-orbit" aria-hidden="true">
               </div>
-              <div class="company-row"><span>Self-Employed</span><span class="dot"></span><span>Karachi, Pakistan (Remote)</span></div>
-              <ul>
-                <li>Design, build, and maintain full-stack SaaS products and internal tools for clients in education, healthcare, media, and sports.</li>
-                <li>Deliver AI-powered features for text, image, speech, and video processing using OpenAI, Google Cloud, AWS AI services, and custom pipelines.</li>
-                <li>Own end-to-end development: architecture, data modeling, backend APIs, frontend UX, DevOps, and observability.</li>
-                <li>Implement real-time collaboration, notification systems, subscription billing, and integrations with third-party APIs.</li>
+              <div class="care-mark" aria-hidden="true">
+                p<span>●</span>
+              </div>
+              <div class="care-node node-one">
+                <span class="node-icon" aria-hidden="true">↔</span>
+                <div>
+                  Client experience<small>Onboarding &amp; ongoing support</small>
+                </div>
+              </div>
+              <div class="care-node node-two">
+                <span class="node-icon" aria-hidden="true">+</span>
+                <div>
+                  Care delivery<small>Scheduling &amp; video sessions</small>
+                </div>
+              </div>
+              <div class="care-node node-three">
+                <span class="node-icon" aria-hidden="true">▦</span>
+                <div>
+                  Practice operations<small>Teams, subscriptions &amp; reporting</small>
+                </div>
+              </div>
+            </div>
+            <p class="visual-caption">The experience. The platform. The operations.</p>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span>01 / Healthcare</span><span>Client engagement</span>
+            </div>
+            <h3>Person.care</h3>
+            <p class="project-lead">A connected platform for counseling and health coaching.</p>
+            <p>I built the product end to end for Technology Digest and continue to lead its technical development—from client and counselor workflows to practice onboarding and AI-assisted features.</p>
+            <ul class="tags" aria-label="Person.care technologies">
+              <li>Rails 8</li>
+              <li>Hotwire</li>
+              <li>PostgreSQL</li>
+              <li>React / Next.js</li>
+              <li>AWS</li>
+            </ul>
+            <details class="project-details">
+              <summary>My contribution <span aria-hidden="true">+</span></summary>
+              <div class="details-body">
+                <ul>
+                  <li>Built scheduling, video-session, subscription, and health-tracking workflows for clients and care teams.</li>
+                  <li>Developed AI-assisted notes, transcript search, and support experiences.</li>
+                  <li>Built supporting marketing and onboarding applications, including a React/Next.js practice signup flow.</li>
+                  <li>Own ongoing development, integrations, testing, deployment, and improvements.</li>
+                </ul>
+                <p class="detail-note">Freelance client engagement · July 2025–present</p>
+              </div>
+            </details>
+            <a class="project-link" href="https://person.care/" target="_blank" rel="noopener noreferrer">Visit Person.care <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-external"></use></svg></a>
+          </div>
+        </article>
+        <div class="project-grid">
+          <article class="project" id="intellecta">
+            <div class="project-visual intellecta-visual" aria-label="Intellecta supports lesson planning, assessment, and language practice">
+              <div class="visual-topline">
+                <span>INTELLECTA.APP</span><span>TOOLS FOR LEARNING</span>
+              </div>
+              <div class="learning-composition">
+                <span class="learning-star" aria-hidden="true">✳</span>
+                <div class="learning-paper paper-back">
+                  <span>03 / PRACTICE</span><strong>Build confidence.</strong>
+                  <p>IELTS &amp; TOEFL preparation</p>
+                </div>
+                <div class="learning-paper paper-front">
+                  <span>01 / PLAN</span><strong>Make room<br>for learning.</strong>
+                  <div class="paper-lines" aria-hidden="true">
+                    <i></i><i></i><i></i>
+                  </div>
+                  <small>Lesson plans · Worksheets · Assessments</small>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span>02 / Education &amp; AI</span><span>Co-founder</span>
+              </div>
+              <h3>Intellecta.app</h3>
+              <p class="project-lead">AI tools that support the work of teaching and learning.</p>
+              <p>I co-founded Intellecta and built it end to end. It brings together lesson planning, assessment creation, language practice, and personalized study tools in one product.</p>
+              <ul class="tags" aria-label="Intellecta technologies">
+                <li>Rails 8</li>
+                <li>Hotwire</li>
+                <li>OpenAI</li>
+                <li>Sidekiq</li>
+                <li>Docker / Kamal</li>
               </ul>
+              <details class="project-details">
+                <summary>My contribution <span aria-hidden="true">+</span></summary>
+                <div class="details-body">
+                  <ul>
+                    <li>Built lesson-plan, worksheet, assessment, and rubric generation workflows.</li>
+                    <li>Developed IELTS/TOEFL practice, speaking feedback, study roadmaps, and flashcards.</li>
+                    <li>Own the application, AI integrations, background processing, and deployment.</li>
+                    <li>Continue improving the learning experience and how AI requests are processed.</li>
+                  </ul>
+                  <p class="detail-note">Co-founded product · 2024–present</p>
+                </div>
+              </details>
+              <a class="project-link" href="https://intellecta.app/" target="_blank" rel="noopener noreferrer">Visit Intellecta <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-external"></use></svg></a>
+            </div>
+          </article>
+          <article class="project" id="dbdesigner">
+            <div class="project-visual database-visual" aria-label="A conceptual database diagram showing connected tables">
+              <div class="visual-topline">
+                <span>DB DESIGNER</span><span>SCHEMAS, CONNECTED</span>
+              </div>
+              <div class="schema-composition" aria-hidden="true">
+                <svg class="schema-lines" viewBox="0 0 480 260" preserveAspectRatio="none">
+                  <path d="M170 72 H250 V164 H300"/><path d="M170 172 H220 V95 H300"/><circle cx="170" cy="72" r="4"/><circle cx="300" cy="164" r="4"/><circle cx="170" cy="172" r="4"/><circle cx="300" cy="95" r="4"/>
+                </svg>
+                <div class="schema-table schema-one">
+                  <strong><span>▦</span> projects</strong><span><i>PK</i> id</span><span><i>↳</i> team_id</span><span>name</span>
+                </div>
+                <div class="schema-table schema-two">
+                  <strong><span>▦</span> teams</strong><span><i>PK</i> id</span><span>name</span>
+                </div>
+                <div class="schema-table schema-three">
+                  <strong><span>▦</span> members</strong><span><i>PK</i> id</span><span><i>↳</i> team_id</span><span>role</span>
+                </div>
+              </div>
+              <p class="visual-caption">Visual modeling · Collaboration · SQL</p>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span>03 / Developer tools</span><span>Product engineering</span>
+              </div>
+              <h3>DB Designer</h3>
+              <p class="project-lead">From a visual schema to a shared, evolving database design.</p>
+              <p>I built both the frontend and backend applications for the modern DB Designer product, connecting an interactive modeling experience with collaboration, versioning, and AI-assisted workflows.</p>
+              <ul class="tags" aria-label="DB Designer technologies">
+                <li>Vue 3</li>
+                <li>TypeScript</li>
+                <li>Rails 7</li>
+                <li>Action Cable</li>
+                <li>PostgreSQL</li>
+              </ul>
+              <details class="project-details">
+                <summary>My contribution <span aria-hidden="true">+</span></summary>
+                <div class="details-body">
+                  <ul>
+                    <li>Built the Vue/TypeScript interface and Rails API behind the modern product.</li>
+                    <li>Implemented schema modeling, team collaboration, version history, and subscription workflows.</li>
+                    <li>Developed multi-database import/export, AI-assisted schema generation, and document/image imports.</li>
+                  </ul>
+                  <p class="detail-note">Engineering contributor to the product · 2019–present</p>
+                </div>
+              </details>
+            </div>
+          </article>
+          <article class="project compact-project" id="rhini">
+            <div class="compact-project-top">
+              <span class="product-symbol rhini-symbol" aria-hidden="true">r<span>✳</span></span><span class="status-badge"><span class="status-dot" aria-hidden="true"></span> Live for users</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span>04 / Personal health tools</span><span>My product</span>
+              </div>
+              <h3>RhiniSmartAI</h3>
+              <p class="project-lead">Everyday allergy context, brought together.</p>
+              <p>My own product, built end to end. It combines symptom tracking, environmental information, travel outlooks, and a contextual AI allergy assistant.</p>
+              <ul class="tags" aria-label="RhiniSmartAI technologies">
+                <li>Rails 8</li>
+                <li>Hotwire</li>
+                <li>OpenAI / Gemini</li>
+                <li>Weather &amp; air-quality APIs</li>
+              </ul>
+              <details class="project-details">
+                <summary>My contribution <span aria-hidden="true">+</span></summary>
+                <div class="details-body">
+                  <ul>
+                    <li>Designed and built onboarding, symptom logging, profiles, reports, and travel outlooks.</li>
+                    <li>Integrated weather and air-quality information with location-aware experiences.</li>
+                    <li>Built a contextual, multilingual AI assistant with streamed responses.</li>
+                    <li>Own the application and its ongoing delivery.</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+          </article>
+          <article class="project compact-project" id="rolescout">
+            <div class="compact-project-top">
+              <span class="product-symbol scout-symbol" aria-hidden="true"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-target"></use></svg></span><span class="status-badge development"><span class="status-dot" aria-hidden="true"></span> In development</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span>05 / Recruitment &amp; AI</span><span>Client engagement</span>
+              </div>
+              <h3>RoleScout</h3>
+              <p class="project-lead">Job matching with context behind the recommendation.</p>
+              <p>I’m developing RoleScout end to end for a client, combining résumé parsing, candidate profiles, ATS job ingestion, and AI-assisted matching with supporting evidence.</p>
+              <ul class="tags" aria-label="RoleScout technologies">
+                <li>Rails 8</li>
+                <li>Hotwire</li>
+                <li>OpenAI</li>
+                <li>PostgreSQL</li>
+                <li>Solid Queue</li>
+              </ul>
+              <details class="project-details">
+                <summary>My contribution <span aria-hidden="true">+</span></summary>
+                <div class="details-body">
+                  <ul>
+                    <li>Building candidate-profile and résumé-processing workflows.</li>
+                    <li>Connecting ATS sources to eligibility checks, screening, and ranked recommendations.</li>
+                    <li>Developing explanations that support match recommendations.</li>
+                    <li>Adding structured AI responses, usage tracking, and budget controls.</li>
+                  </ul>
+                  <p class="detail-note">Client product currently in development.</p>
+                </div>
+              </details>
+            </div>
+          </article>
+        </div>
+        <details class="earlier-work">
+          <summary><span><span class="eyebrow">More from the journey</span><strong>Earlier products &amp; collaborations</strong></span><span class="expand-icon" aria-hidden="true">+</span></summary>
+          <div class="earlier-list">
+            <div>
+              <h4>Tendable</h4>
+              <span>2025</span>
+              <p>Backend and frontend enhancements for health and care quality tooling.</p>
+            </div>
+            <div>
+              <h4>MySportsbook</h4>
+              <span>2023–2024</span>
+              <p>Sports networking, athlete videos, scouting, and real-time engagement.</p>
+            </div>
+            <div>
+              <h4>Joburg Post</h4>
+              <span>2023–2024</span>
+              <p>Digital publishing workflows and multimedia content for a newsroom platform.</p>
+            </div>
+            <div>
+              <h4>ChatToAPotato</h4>
+              <span>2021–2023</span>
+              <p>Anonymous messaging experiences and counselor dashboards.</p>
+            </div>
+            <div>
+              <h4>DaewooCab</h4>
+              <span>2016–2019</span>
+              <p>Booking and fleet workflows with mapping, routing, and location tracking.</p>
+            </div>
+          </div>
+        </details>
+      </section>
+      <section class="approach-section" id="approach" aria-labelledby="approach-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">02 / How I work</p>
+              <h2 id="approach-title">Modern tools.<br><em>Accountable engineering.</em></h2>
+            </div>
+            <p>AI is part of how I build. Architecture, product decisions, and the quality of what ships remain my responsibility.</p>
+          </div>
+          <div class="principles">
+            <article>
+              <span class="principle-number">01</span>
+              <h3>Understand the product.</h3>
+              <p>Start with the people, the workflow, and the problem. Turn that understanding into a clear scope and practical technical decisions.</p>
             </article>
-
-            <article class="timeline-item">
-              <div class="item-head">
-                <h4>Senior Ruby on Rails Developer</h4>
-                <span class="date-pill">Nov 2019 - Nov 2020</span>
-              </div>
-              <div class="company-row"><span>Cooperative Computing</span><span class="dot"></span><span>Karachi, Pakistan</span></div>
-              <ul>
-                <li>Developed and maintained scalable, secure Rails applications with modern frontends, focusing on performance and reliability.</li>
-                <li>Integrated third-party APIs for payments, auth, and communication to streamline workflows and enhance product capabilities.</li>
-                <li>Collaborated with cross-functional teams and mentored junior developers on Rails, JavaScript, and testing best practices.</li>
-              </ul>
+            <article>
+              <span class="principle-number">02</span>
+              <h3>Own the whole system.</h3>
+              <p>Connect data models, backend services, interfaces, integrations, and deployment. Keep the code organized and the next change manageable.</p>
             </article>
-
-            <article class="timeline-item">
-              <div class="item-head">
-                <h4>Full-Stack Ruby on Rails Engineer</h4>
-                <span class="date-pill">Jan 2016 - Oct 2019</span>
-              </div>
-              <div class="company-row"><span>Daewoo Pakistan Express Bus Service</span><span class="dot"></span><span>Lahore, Pakistan</span></div>
-              <ul>
-                <li>Led development of online booking and cab systems, helping modernize Daewoo's digital customer experience.</li>
-                <li>Implemented backend services, seat reservation logic, and payment flows using Ruby on Rails and PostgreSQL.</li>
-                <li>Collaborated with operations and business teams to translate requirements into scalable technical solutions.</li>
-              </ul>
+            <article>
+              <span class="principle-number">03</span>
+              <h3>Use AI. Apply judgment.</h3>
+              <p>I work with Codex, OpenAI, and Google AI alongside RubyMine. I review the output and take responsibility for how it fits the product.</p>
             </article>
-
-            <article class="timeline-item">
-              <div class="item-head">
-                <h4>Ruby on Rails Developer</h4>
-                <span class="date-pill">Jan 2014 - Dec 2015</span>
-              </div>
-              <div class="company-row"><span>IntensityLabs</span><span class="dot"></span><span>Lahore, Pakistan</span></div>
-              <ul>
-                <li>Built and optimized web applications for international clients with clean architecture and maintainable code.</li>
-                <li>Worked across the stack on features, bug fixes, performance improvements, and frontend integrations.</li>
-              </ul>
-            </article>
-
-            <article class="timeline-item">
-              <div class="item-head">
-                <h4>SEO Team Lead</h4>
-                <span class="date-pill">Oct 2011 - Dec 2013</span>
-              </div>
-              <div class="company-row"><span>EGlobalSolution</span><span class="dot"></span><span>Lahore, Pakistan</span></div>
-              <ul>
-                <li>Led SEO strategy and execution, collaborating with development teams on SEO-friendly architecture and content structures.</li>
-                <li>Gained strong understanding of analytics, funnels, and acquisition that informs product and engineering decisions.</li>
-              </ul>
+            <article>
+              <span class="principle-number">04</span>
+              <h3>Validate before release.</h3>
+              <p>Code review, automated tests, browser QA, security checks, and staging validation are part of my delivery workflow.</p>
             </article>
           </div>
-        </section>
-
-        <section class="panel" id="projects">
-          <h2 class="section-label"><span class="material-symbols-outlined" aria-hidden="true">rocket_launch</span> Featured Projects</h2>
-          <div class="projects-grid">
-            <article class="project-item">
-              <div class="item-head"><h4>Person.care</h4><span class="date-pill">2025 - Present</span></div>
-              <p>Online counseling and health coaching platform providing intervention programs, virtual sessions, secure messaging, scheduling, and AI-assisted tooling for therapists and clients.</p>
-              <div class="tag-cloud"><span class="tag">Rails 8</span><span class="tag">PostgreSQL</span><span class="tag">Stripe</span><span class="tag">Twilio</span><span class="tag">OpenAI</span><span class="tag">AWS ECS</span></div>
-            </article>
-
-            <article class="project-item">
-              <div class="item-head"><h4>Intellecta.app</h4><span class="date-pill">2024 - Present</span></div>
-              <p>AI-driven educational platform with lesson plan generation, worksheet creation, MCQ assessment builder, math solver, IELTS modules, multimedia processing, and cloud-native deployment.</p>
-              <div class="tag-cloud"><span class="tag">Rails</span><span class="tag">Hotwire</span><span class="tag">OpenAI</span><span class="tag">Google Cloud</span><span class="tag">Hugging Face</span><span class="tag">Docker</span></div>
-            </article>
-
-            <article class="project-item">
-              <div class="item-head"><h4>DB Designer</h4><span class="date-pill">2019 - Present</span></div>
-              <p>Full-stack database schema design and modeling platform with real-time collaboration, multi-database support, teams, subscription billing, and import/export workflows.</p>
-              <div class="tag-cloud"><span class="tag">Rails</span><span class="tag">Vue 3</span><span class="tag">TypeScript</span><span class="tag">ActionCable</span><span class="tag">Stripe</span><span class="tag">Playwright</span></div>
-            </article>
-
-            <article class="project-item">
-              <div class="item-head"><h4>Tendable</h4><span class="date-pill">2025</span></div>
-              <p>Quality and compliance tools for health and care professionals, focused on reducing admin overhead and enabling real-time care quality assurance.</p>
-              <div class="tag-cloud"><span class="tag">Rails</span><span class="tag">Compliance</span><span class="tag">Performance</span><span class="tag">Care Tech</span></div>
-            </article>
-
-            <article class="project-item">
-              <div class="item-head"><h4>MySportsbook</h4><span class="date-pill">2023 - 2024</span></div>
-              <p>Africa's sports networking platform connecting fans with athletes, coaches, and federations through skill videos, scouting opportunities, and real-time engagement.</p>
-              <div class="tag-cloud"><span class="tag">Media</span><span class="tag">Video</span><span class="tag">Networking</span><span class="tag">Realtime</span></div>
-            </article>
-
-            <article class="project-item">
-              <div class="item-head"><h4>Joburg Post</h4><span class="date-pill">2023 - 2024</span></div>
-              <p>Digital newsroom connecting the pan-African voice through news, opinions, multimedia content, scalable publishing workflows, and content operations.</p>
-              <div class="tag-cloud"><span class="tag">CMS</span><span class="tag">Publishing</span><span class="tag">Multimedia</span><span class="tag">Newsroom</span></div>
-            </article>
-
-            <article class="project-item">
-              <div class="item-head"><h4>ChatToAPotato</h4><span class="date-pill">2021 - 2023</span></div>
-              <p>Mental health web app connecting users with counselors through an anonymous friendly avatar chat experience, secure messaging, and counselor dashboards.</p>
-              <div class="tag-cloud"><span class="tag">Mental Health</span><span class="tag">Messaging</span><span class="tag">Dashboards</span><span class="tag">Security</span></div>
-            </article>
-
-            <article class="project-item">
-              <div class="item-head"><h4>DaewooCab</h4><span class="date-pill">2016 - 2019</span></div>
-              <p>Pakistan cab service platform with web and mobile interfaces for booking, fleet management, real-time tracking, routing, and location-aware booking.</p>
-              <div class="tag-cloud"><span class="tag">Rails</span><span class="tag">PostgreSQL</span><span class="tag">Maps API</span><span class="tag">Nginx</span></div>
-            </article>
+          <aside class="engineering-perspective" aria-labelledby="perspective-title">
+            <div>
+              <p class="eyebrow">A practical point of view</p>
+              <h3 id="perspective-title">Languages evolve.<br><em>Engineering judgment matters.</em></h3>
+            </div>
+            <div class="perspective-copy">
+              <p>I choose languages and tools to suit the product. Across Ruby, Python, and JavaScript, my focus is understanding the problem, shaping the architecture, and delivering software that people can rely on.</p>
+              <p>As coding agents take on more implementation work, I stay responsible for the decisions, validation, and quality of what ships.</p>
+              <a href="https://world.hey.com/dhh/over-my-dead-pencil-fb0f3647" target="_blank" rel="noopener noreferrer">Related reading: DHH, “Over my dead pencil” <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-external"></use></svg></a>
+            </div>
+          </aside>
+          <div class="approach-footer">
+            <span class="small-mark" aria-hidden="true">✳</span>
+            <p>The goal is useful software that can be understood, maintained, and improved.</p>
+            <a href="#contact">Let’s work together <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-chevron"></use></svg></a>
           </div>
-        </section>
-
-        <section class="panel" id="skills">
-          <h2 class="section-label"><span class="material-symbols-outlined" aria-hidden="true">code_blocks</span> Skills</h2>
-          <div class="skills-board">
-            <div class="skill-box">
-              <h4><span class="material-symbols-outlined" aria-hidden="true">terminal</span>Programming</h4>
-              <ul class="skill-list"><li>Ruby</li><li>JavaScript ES6+</li><li>TypeScript</li><li>Python</li><li>SQL</li></ul>
+        </div>
+      </section>
+      <section class="section container about-section" id="about" aria-labelledby="about-title">
+        <div class="about-story">
+          <p class="eyebrow">03 / A little about me</p>
+          <h2 id="about-title">An engineer’s care.<br><em>A builder’s curiosity.</em></h2>
+          <p class="large-copy">I like taking a product from “what if” to something people can actually use.</p>
+          <p>Over more than a decade in full-stack engineering, I’ve worked across healthcare, education, developer tools, transport, and digital media. That range has made me comfortable with both the details of implementation and the decisions that shape a product.</p>
+          <p>Today, I combine independent client work with products of my own. I’m based in <strong>Bahawalpur, Punjab, Pakistan</strong>, and work remotely with teams and founders.</p>
+          <p>My earlier work in SEO and analytics still influences how I think about discoverability, user journeys, and the purpose behind a feature.</p>
+          <div class="personal-details">
+            <div>
+              <span>Education</span>
+              <p>BS, Information Technology<br><strong>Virtual University of Pakistan</strong></p>
             </div>
-            <div class="skill-box">
-              <h4><span class="material-symbols-outlined" aria-hidden="true">widgets</span>Frameworks &amp; Platforms</h4>
-              <ul class="skill-list"><li>Ruby on Rails 7/8</li><li>Hotwire</li><li>Turbo</li><li>Stimulus</li><li>React</li><li>Vue.js 3</li><li>Node.js</li></ul>
-            </div>
-            <div class="skill-box">
-              <h4><span class="material-symbols-outlined" aria-hidden="true">smart_toy</span>AI &amp; ML Integrations</h4>
-              <ul class="skill-list"><li>LLM Apps</li><li>Prompt Engineering</li><li>Text/Image/Video Processing</li><li>Speech Recognition</li><li>Embeddings</li><li>Text-to-SQL</li><li>OpenAI</li><li>Hugging Face</li></ul>
-            </div>
-            <div class="skill-box">
-              <h4><span class="material-symbols-outlined" aria-hidden="true">cloud</span>Cloud &amp; DevOps</h4>
-              <ul class="skill-list"><li>AWS ECS/ECR/S3</li><li>ElastiCache</li><li>DigitalOcean</li><li>Docker</li><li>GitHub Actions</li><li>Nginx</li><li>Kamal</li><li>Capistrano</li></ul>
-            </div>
-            <div class="skill-box">
-              <h4><span class="material-symbols-outlined" aria-hidden="true">database</span>Data &amp; Storage</h4>
-              <ul class="skill-list"><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Redis</li><li>Active Storage</li><li>S3</li></ul>
-            </div>
-            <div class="skill-box">
-              <h4><span class="material-symbols-outlined" aria-hidden="true">sync_alt</span>Realtime &amp; Integrations</h4>
-              <ul class="skill-list"><li>Action Cable</li><li>WebSockets</li><li>FCM</li><li>Stripe</li><li>Twilio</li><li>Google APIs</li><li>Webhooks</li><li>API Design</li></ul>
+            <div>
+              <span>Away from the keyboard</span>
+              <p>Badminton, gaming,<br>animation &amp; storytelling.</p>
             </div>
           </div>
-        </section>
-
-        <section class="panel" id="education">
-          <h2 class="section-label"><span class="material-symbols-outlined" aria-hidden="true">school</span> Education &amp; Interests</h2>
-          <div class="projects-grid">
-            <article class="project-item">
-              <h4>Bachelor of Science in Information Technology</h4>
-              <p>Virtual University of Pakistan</p>
-            </article>
-            <article class="project-item">
-              <h4>Interests</h4>
-              <p>AI Research and Applied ML, gaming, animation and storytelling, and badminton.</p>
-            </article>
+        </div>
+        <div class="toolkit">
+          <div class="toolkit-title">
+            <p class="eyebrow">My working toolkit</p>
+            <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-layers"></use></svg>
           </div>
-        </section>
-      </div>
-    </section>
+          <dl>
+            <div>
+              <dt>Application engineering</dt>
+              <dd>Ruby · Ruby on Rails 7/8 · Python · JavaScript · TypeScript · APIs &amp; integrations</dd>
+            </div>
+            <div>
+              <dt>Interfaces &amp; interaction</dt>
+              <dd>Hotwire · Turbo · Stimulus · Vue · React · Next.js · Tailwind CSS</dd>
+            </div>
+            <div>
+              <dt>Data &amp; real-time systems</dt>
+              <dd>PostgreSQL · Redis · Sidekiq · Solid Queue · Action Cable · WebSockets</dd>
+            </div>
+            <div>
+              <dt>Applied AI</dt>
+              <dd>OpenAI · Google AI · Structured outputs · Embeddings · Transcription · Document processing</dd>
+            </div>
+            <div>
+              <dt>Delivery &amp; operations</dt>
+              <dd>Docker · AWS · DigitalOcean · GitHub Actions · Kamal · Capistrano · Sentry</dd>
+            </div>
+          </dl>
+          <p class="toolkit-note">The stack follows the product. Clear boundaries and maintainability come first.</p>
+        </div>
+      </section>
+      <section class="section experience-section container" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">04 / Experience</p>
+            <h2 id="experience-title">A decade of building.<br><em>Still moving forward.</em></h2>
+          </div>
+          <p>From agency and transport platforms to independent product engineering and applied AI.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item current">
+            <div class="timeline-date">
+              Jan 2021 — Present<span>Independent · Remote</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Freelance Senior Full-Stack Engineer</h3>
+              <p class="timeline-company">Client partnerships &amp; independent products</p>
+              <p>Build and maintain SaaS platforms and AI-powered applications across the stack. Own architecture, APIs, frontend experiences, integrations, deployment, and ongoing improvements.</p>
+              <div class="engagement">
+                <span class="status-dot" aria-hidden="true"></span>
+                <div>
+                  <strong>Technology Digest / Person.care</strong><span>Freelance client engagement · Jul 2025–present</span>
+                  <p>End-to-end product development and continuing technical ownership.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">
+              Nov 2019 — Nov 2020<span>Karachi, Pakistan</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Senior Ruby on Rails Developer</h3>
+              <p class="timeline-company">Cooperative Computing</p>
+              <p>Developed and maintained Rails applications, integrated third-party services, collaborated across product teams, and mentored junior developers.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">
+              Jan 2016 — Nov 2019<span>Lahore, Pakistan</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Full-Stack Ruby on Rails Engineer</h3>
+              <p class="timeline-company">Daewoo Pakistan Express Bus Service</p>
+              <p>Led development of online booking and cab systems, including reservations, payment workflows, and mapping integrations in collaboration with operations teams.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">
+              Jan 2014 — Dec 2015<span>Lahore, Pakistan</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Ruby on Rails Developer</h3>
+              <p class="timeline-company">IntensityLabs</p>
+              <p>Built and improved applications for international clients, working across backend logic, frontend integrations, maintenance, and performance.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">
+              Oct 2011 — Dec 2013<span>Lahore, Pakistan</span>
+            </div>
+            <div class="timeline-content">
+              <h3>SEO Team Lead</h3>
+              <p class="timeline-company">EGlobalSolution</p>
+              <p>Led SEO work and collaborated with development teams on site structure and content, building a foundation in analytics and user acquisition.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-inner">
+          <div>
+            <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Open to the right conversation</p>
+            <h2 id="contact-title">What are you<br><em>building next?</em></h2>
+            <p>I’m interested in senior engineering roles and thoughtful client partnerships. Whether you’re starting a product or improving an existing one, let’s talk about what it needs.</p>
+            <a class="button button-light" href="mailto:shahzaib_khw@hotmail.com">Start a conversation <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-chevron"></use></svg></a>
+          </div>
+          <div class="contact-details">
+            <div>
+              <span class="contact-label">Email me</span><a class="email-link" href="mailto:shahzaib_khw@hotmail.com">shahzaib_khw@hotmail.com</a><button class="copy-email" type="button" data-email="shahzaib_khw@hotmail.com"><span class="copy-label">Copy email</span> <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-copy"></use></svg></button>
+              <p class="copy-status sr-only" role="status" aria-live="polite"></p>
+            </div>
+            <div class="contact-socials">
+              <a href="https://wa.me/923180022016" target="_blank" rel="noopener noreferrer">WhatsApp <span>+92 318 0022016 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-external"></use></svg></span></a>
+              <a href="https://github.com/shah743" target="_blank" rel="noopener noreferrer">GitHub <span>@shah743 <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-external"></use></svg></span></a><a href="https://www.linkedin.com/in/shahzaibfullstack" target="_blank" rel="noopener noreferrer">LinkedIn <span>Connect with me <svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-external"></use></svg></span></a>
+              <a href="assets/Shah-Zaib-Resume.pdf" download="Shah-Zaib-Resume.pdf">Download résumé <span>PDF <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-download"></use></svg></span></a>
+            </div>
+            <p class="contact-location">Bahawalpur, Punjab, Pakistan<br><span>Remote collaboration · UTC+05:00</span></p>
+          </div>
+        </div>
+      </section>
     </main>
-
-    <footer class="footer-cta">
-      <div>
-        <h3>Building software, AI workflows &amp; SaaS systems <span>for a smarter future</span></h3>
-        <p>From idea to architecture, implementation, integrations, deployment, and ongoing improvement.</p>
-      </div>
-      <div class="footer-contact">
-        <a href="mailto:shahzaib_khw@hotmail.com"><span class="material-symbols-outlined" aria-hidden="true">mail</span><span>shahzaib_khw@hotmail.com</span></a>
-        <a href="https://linkedin.com/in/shahzaibfullstack" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">groups</span><span>linkedin.com/in/shahzaibfullstack</span></a>
-        <a href="https://github.com/shah743" target="_blank" rel="noopener"><span class="material-symbols-outlined" aria-hidden="true">code</span><span>github.com/shah743</span></a>
+    <footer class="site-footer">
+      <div class="container">
+        <a class="footer-signature" href="#home">Shah Zaib<span>Engineer. Builder. Always learning.</span></a>
+        <p>© <span id="year">2026</span> Shah Zaib</p>
+        <button class="motion-toggle" type="button" aria-pressed="false" hidden><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-pause"></use></svg><span>Pause motion</span></button>
+        <a class="back-top" href="#home">Back to top <svg class="icon icon-up" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-chevron"></use></svg></a>
       </div>
     </footer>
-  </div>
-</body>
+  </body>
 </html>
