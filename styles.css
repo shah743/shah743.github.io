@@ -187,6 +187,20 @@ details[open] > summary > span:last-child, .project-details[open] summary > span
 .earlier-list span { font-size: 11px; color: var(--muted); }
 .earlier-list p { font-size: 12px; color: var(--muted); }
 
+/* Linked projects and course certificates */
+.open-source { margin-top: 36px; }
+.open-source h3 { margin-bottom: 17px; font-size: 22px; font-weight: 500; }
+.certificate-section { padding-bottom: clamp(56px, 7vw, 96px); }
+.certificate-section h2 { margin-bottom: 24px; }
+.resource-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+.resource-link { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 100%; padding: 16px 20px; border: 1px solid var(--line); border-radius: 8px; background: var(--white); }
+.resource-copy strong { display: block; font-size: 15px; font-weight: 600; line-height: 1.45; }
+.resource-copy > span { display: block; margin-top: 4px; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.resource-copy time { white-space: nowrap; }
+.resource-link .icon { width: 16px; height: 16px; color: var(--green); }
+.resource-link:is(:hover, :focus-visible) { border-color: #9aa69b; }
+.resource-link:is(:hover, :focus-visible) strong { text-decoration: underline; text-underline-offset: 3px; }
+
 /* Working philosophy */
 .approach-section { background: var(--green); color: #f3f5e9; padding-block: 93px 37px; }
 .approach-section .section-heading > p { color: #bac9be; }
@@ -522,6 +536,8 @@ html[data-motion="off"] .button:hover { transform: none; }
   .personal-details { grid-template-columns: 1.2fr 1fr; gap: 20px; }
   .toolkit { padding: 26px; }
   .toolkit dd { font-size: 12px; }
+  .resource-grid { grid-template-columns: 1fr; }
+  .resource-link { padding-inline: 16px; }
   .experience-section { padding-top: 0; }
   .timeline-item { grid-template-columns: 1fr; gap: 17px; padding-block: 27px; }
   .timeline-date { padding-left: 25px; font-size: 11px; }
